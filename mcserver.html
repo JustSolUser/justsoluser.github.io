@@ -14,6 +14,28 @@
 <li>(JE, BE): <em>25565</em></li>
 </ul>
 </li>
+
+<p><a href="javascript:history.go(-1)">[돌아가기]</a></p>
+<p>&nbsp;</p>
+<h1><em><strong>우주지렁이 홈페이지</strong></em></h1>
+<div class="server-status">
+    놀이터 서버: <span class="server-online"></span>
+</div>
+
+<script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+<script>
+    MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {
+        port: 25565 // optional, only if you need a custom port
+    }, function (err, status) {
+        if (err) {
+            return document.querySelector('.server-status').innerHTML = 'Error loading status';
+        }
+
+        // you can change these to your own message!
+        document.querySelector('.server-online').innerHTML = status.online ? 'up' : 'down';
+    });
+</script>
+
 <li><strong>야생</strong><br />
 <ul>
 <li>매번 대규모 업데이트마다 초기화</li>
