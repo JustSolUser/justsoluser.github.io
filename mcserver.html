@@ -12,7 +12,7 @@
             <li>
                 <strong>놀이터(평지)</strong>
                     <div class="server-status">
-                        서버 상태: <span class="server-online"></span>
+                        서버 상태: <span class="playground-online"></span>
                     </div>
                 <ul>
                     <li>(JE, BE): <em>25565</em></li>
@@ -24,17 +24,17 @@
                     port: 25565 // optional, only if you need a custom port
                 }, function (err, status) {
                     if (err) {
-                        return document.querySelector('.server-status').innerHTML = 'Error loading status';
+                        return document.querySelector('.playground-status').innerHTML = 'Error loading status';
                     }
 
                     // you can change these to your own message!
-                    document.querySelector('.server-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
+                    document.querySelector('.playground-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
                 });
             </script>
 
             <li><strong>야생</strong><br />
                     <div class="server-status">
-                        서버 상태: <span class="server-online"></span>
+                        서버 상태: <span class="survival-online"></span>
                     </div>
                 <ul>
                     <li>매번 대규모 업데이트마다 초기화</li>
@@ -48,17 +48,17 @@
                     port: 25566 // optional, only if you need a custom port
                 }, function (err, status) {
                     if (err) {
-                        return document.querySelector('.server-status').innerHTML = 'Error loading status';
+                        return document.querySelector('.survival-status').innerHTML = 'Error loading status';
                     }
 
                     // you can change these to your own message!
-                    document.querySelector('.server-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
+                    document.querySelector('.survival-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
                 });
             </script>
             
             <li><strong>SPEEEEEEED (v0.6)</strong><em><br /></em>맵 제작자: MinedApple<br />
                     <div class="server-status">
-                        서버 상태: <span class="server-online"></span>
+                        서버 상태: <span class="speed-online"></span>
                     </div>
                 <ul>
                     <li>(JE): <em>25567</em></li>
@@ -71,17 +71,17 @@
                     port: 25567 // optional, only if you need a custom port
                 }, function (err, status) {
                     if (err) {
-                        return document.querySelector('.server-status').innerHTML = 'Error loading status';
+                        return document.querySelector('.speed-status').innerHTML = 'Error loading status';
                     }
 
                     // you can change these to your own message!
-                    document.querySelector('.server-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
+                    document.querySelector('.speed-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
                 });
             </script>
             
             <li><strong>256 (v1.09)</strong><em><br /></em>맵 제작자: MinedApple<br />
                     <div class="server-status">
-                        서버 상태: <span class="server-online"></span>
+                        서버 상태: <span class="256-online"></span>
                     </div>
                 <ul>
                     <li>(JE): <em>25568</em></li>
@@ -94,11 +94,11 @@
                     port: 25568 // optional, only if you need a custom port
                 }, function (err, status) {
                     if (err) {
-                        return document.querySelector('.server-status').innerHTML = 'Error loading status';
+                        return document.querySelector('.256-status').innerHTML = 'Error loading status';
                     }
 
                     // you can change these to your own message!
-                    document.querySelector('.server-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
+                    document.querySelector('.256-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
                 });
             </script>
         </ul>
