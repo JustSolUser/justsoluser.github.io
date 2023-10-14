@@ -10,19 +10,13 @@
         <p><em>&nbsp;- 마인크래프트 서버 주소: <strong>mc.unikue.kro.kr</strong></em></p>
         <ul>
             <li>
-                <strong>놀이터(평지)</strong>
-                    <div class="playground-status">
-                        서버 상태: <span class="playground-online"></span>
-                    </div>
+                <strong>놀이터(평지)</strong><span class="playground-online"></span>
                 <ul>
                     <li>(JE, BE): <em>25565</em></li>
                 </ul>
             </li>
 
-            <li><strong>야생</strong><br />
-                    <div class="survival-status">
-                        서버 상태: <span class="survival-online"></span>
-                    </div>
+            <li><strong>야생</strong><span class="survival-online"></span><br />
                 <ul>
                     <li>매번 대규모 업데이트마다 초기화</li>
                     <li>(JE): <em>25566</em></li>
@@ -30,10 +24,7 @@
                 </ul>
             </li>
             
-            <li><strong>SPEEEEEEED (v0.6)</strong><em><br /></em>맵 제작자: MinedApple<br />
-                    <div class="speed-status">
-                        서버 상태: <span class="speed-online"></span>
-                    </div>
+            <li><strong>SPEEEEEEED (v0.6)</strong><span class="speed-online"></span><em><br /></em>맵 제작자: MinedApple<br />
                 <ul>
                     <li>(JE): <em>25567</em></li>
                     <li>(BE): <em>19134</em></li>
@@ -41,10 +32,7 @@
             </li>
             </script>
             
-            <li><strong>256 (v1.09)</strong><em><br /></em>맵 제작자: MinedApple<br />
-                    <div class="256-status">
-                        서버 상태: <span class="256-online"></span>
-                    </div>
+            <li><strong>256 (v1.09)</strong><span class="256-online"></span><em><br /></em>맵 제작자: MinedApple<br />
                 <ul>
                     <li>(JE): <em>25568</em></li>
                     <li>(BE): <em>19135</em></li>
@@ -54,45 +42,21 @@
         
         <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
         <script>
-            MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {
-                port: 25565 // optional, only if you need a custom port
-            }, function (err, status) {
-                if (err) {
-                    return document.querySelector('.playground-status').innerHTML = 'Error loading status';
-                }
-
-                // you can change these to your own message!
-                document.querySelector('.playground-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
+            MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {port: 25565}, function (err, status) {
+                document.querySelector('.playground-online').innerHTML = status.online ? ': <font color="green">온라인</font>';
+                document.querySelector('.playground-online').innerHTML = status.offline ? ': <font color="red">오프라인</font>';
              });
-            MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {
-                port: 25566 // optional, only if you need a custom port
-            }, function (err, status) {
-                if (err) {
-                    return document.querySelector('.survival-status').innerHTML = 'Error loading status';
-                }
-
-                // you can change these to your own message!
-                document.querySelector('.survival-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
+            MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {port: 25566}, function (err, status) {
+                document.querySelector('.survival-online').innerHTML = status.online ? ': <font color="green">온라인</font>';
+                document.querySelector('.survival-online').innerHTML = status.offline ? ': <font color="red">오프라인</font>';
              });
-            MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {
-                port: 25567 // optional, only if you need a custom port
-            }, function (err, status) {
-                if (err) {
-                    return document.querySelector('.speed-status').innerHTML = 'Error loading status';
-                }
-
-                // you can change these to your own message!
-                document.querySelector('.speed-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
+            MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {port: 25567}, function (err, status) {
+                document.querySelector('.speed-online').innerHTML = status.online ? ': <font color="green">온라인</font>';
+                document.querySelector('.speed-online').innerHTML = status.offline ? ': <font color="red">오프라인</font>';
              });
-            MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {
-                port: 25568 // optional, only if you need a custom port
-            }, function (err, status) {
-                if (err) {
-                    return document.querySelector('.256-status').innerHTML = 'Error loading status';
-                }
-
-                // you can change these to your own message!
-                document.querySelector('.256-online').innerHTML = status.online ? '<font color="green">온라인</font>' : '<font color="red">오프라인</font>';
+            MinecraftAPI.getServerStatus('mc.unikue.kro.kr', {port: 25568}, function (err, status) {
+                document.querySelector('.256-online').innerHTML = status.online ? ': <font color="green">온라인</font>';
+                document.querySelector('.256-online').innerHTML = status.offline ? ': <font color="red">오프라인</font>';
              });
         </script>
     </body>
