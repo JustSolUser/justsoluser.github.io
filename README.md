@@ -1,5 +1,5 @@
 # 우주지렁이 홈페이지?
-> 사이트 바로가기: [***unikue.kro.kr***](https://unikue.kro.kr)
+> 사이트 바로가기: [***justsoluser.kro.kr***](https://justsoluser.kro.kr)
 > <br/>
 > 해당 사이트는 GitHub Pages를 이용하여 제작되었습니다.
 > <br/>
