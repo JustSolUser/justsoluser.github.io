@@ -1,7 +1,6 @@
 .responsive-table {
   text-align: center;
   vertical-align: middle;
-  min-width: 400px;
 }
 
 .responsive-table tr {height: 20px}
@@ -16,7 +15,7 @@
   .responsive-table {
     text-align: center;
     vertical-align: middle;
-    min-width: 400px;
+    min-width: 360px;
   }
   
   .responsive-table tr {
